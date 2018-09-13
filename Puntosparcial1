@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+int diaga_Sum(void);
+int main()
+{
+    diaga_Sum();
+    return 0;
+}
+
+int diaga_Sum(void)
+{
+    int  sumdia1 = 0, sumdia2 = 0, n = 0, sumtotdia =0;
+    int max[3][3] = {{1,2,3},{4,5,6},{7,8,9}};
+    n=3;
+    for(int i=0; i<3; i++)
+    {
+      // cout<<max[i][i]<<"\n";
+       sumdia1=sumdia1+max[i][i];
+       //cout<<sumdia1<<"\n";
+    }
+    for(int j=0; j<3; j++)
+    {
+        sumdia2=sumdia2+max[j][n-1];
+        n--;
+        //cout<<sumdia2<<"\n";
+    }
+    sumtotdia = sumdia1+sumdia2;
+    cout<<sumtotdia<<"\n";
+}
